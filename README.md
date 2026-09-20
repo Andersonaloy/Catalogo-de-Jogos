@@ -4,6 +4,20 @@ Uma aplicação web desenvolvida com **React** e **Vite**, que consome a [RAWG A
 
 ---
 
+## ⚙️ Pipeline CI/CD
+
+O projeto utiliza GitHub Actions para automatizar a validação e o deploy.
+
+A cada push ou pull request na branch `main` são executadas as seguintes etapas:
+
+- Instalação das dependências (`npm ci`)
+- Verificação do código (`npm run lint`)
+- Execução dos testes (`npm run test`)
+- Geração do build (`npm run build`)
+- Publicação automática no GitHub Pages
+
+---
+
 ## 🔗 Link da Aplicação em Produção
 
 - 🌐 **Site Publicado:** [https://andersonaloy.github.io/Catalogo-de-Jogos/](https://andersonaloy.github.io/Catalogo-de-Jogos/)
