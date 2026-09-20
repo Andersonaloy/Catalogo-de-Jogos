@@ -1,4 +1,3 @@
-import React from 'react';
 import { PLATAFORMAS } from '../services/api';
 
 export default function Header({ 

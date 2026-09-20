@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function GameCard({ game, isFavorite, onToggleFavorite }) {
   return (
     <div className="game-card">
