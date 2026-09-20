@@ -14,7 +14,7 @@ Uma aplicação web desenvolvida com **React** e **Vite**, que consome a [RAWG A
 
 Antes de começar, você precisará ter instalado em sua máquina:
 
-* **Node.js**: Versão `20.x` ou superior (recomendado **Node.js 22.x** ou **24.x**).
+* **Node.js**: Versão `22.x` ou superior.
 * **npm**: Gerenciador de pacotes (geralmente vem instalado junto com o Node.js).
 * **Git**: Para clonagem do repositório.
 * **Chave de API da RAWG**: Gratuita, obtida cadastrando-se em [rawg.io/apidocs](https://rawg.io/apidocs).
