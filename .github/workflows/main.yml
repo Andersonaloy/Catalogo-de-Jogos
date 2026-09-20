@@ -6,7 +6,6 @@ on:
   pull_request:
     branches: [ "main" ]
 
-# Permissões necessárias para fazer o deploy no GitHub Pages
 permissions:
   contents: read
   pages: write
@@ -17,11 +16,13 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  # ------------------------------------
-  # Etapa 1: Integração Contínua (CI)
-  # ------------------------------------
   build-and-test:
     runs-on: ubuntu-latest
+    
+    # Define que os comandos vão rodar dentro da pasta do projeto React
+    defaults:
+      run:
+        working-directory: ./catalogo-jogos
 
     steps:
       - name: Checkout do código
@@ -32,11 +33,12 @@ jobs:
         with:
           node-version: 20
           cache: 'npm'
+          cache-dependency-path: ./catalogo-jogos/package-lock.json
 
       - name: Instalar dependências
         run: npm ci
 
-      - name: Rodar Lint (validação)
+      - name: Rodar Lint
         run: npm run lint
 
       - name: Rodar Testes
@@ -50,11 +52,8 @@ jobs:
       - name: Upload do artefato para Deploy
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'
+          path: './catalogo-jogos/dist'
 
-  # ------------------------------------
-  # Etapa 2: Entrega Contínua (CD)
-  # ------------------------------------
   deploy:
     needs: build-and-test
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
