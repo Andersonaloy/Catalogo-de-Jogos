@@ -27,4 +27,4 @@ Antes de começar, você precisará ter instalado em sua máquina:
 Abra o terminal e execute o comando abaixo para clonar o repositório:
 
 ```bash
-git clone [https://github.com/Andersonaloy/Catalogo-de-Jogos.git](https://github.com/Andersonaloy/Catalogo-de-Jogos.git)
+git clone https://github.com/Andersonaloy/Catalogo-de-Jogos.git
