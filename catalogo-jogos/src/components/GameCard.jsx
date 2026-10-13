@@ -8,7 +8,6 @@ export default function GameCard({ game, isFavorite, onToggleFavorite }) {
         className="game-image"
         width="300"
         height="150"
-        loading="lazy"
         decoding="async"
       />
 
