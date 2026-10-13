@@ -17,7 +17,7 @@ export function otimizarImagem(url) {
 
   return url.replace(
     'media.rawg.io/media/',
-    'media.rawg.io/media/resize/640/-/'
+    'media.rawg.io/media/resize/420/-/'
   );
 }
 
