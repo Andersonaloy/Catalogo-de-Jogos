@@ -68,12 +68,13 @@ export default function App() {
           </p>
         ) : (
           <div className="game-grid">
-            {displayedGames.map((game) => (
-              <GameCard 
-                key={game.id} 
-                game={game} 
+            {displayedGames.map((game, index) => (
+              <GameCard
+                key={game.id}
+                game={game}
                 isFavorite={favorites.some((fav) => fav.id === game.id)}
                 onToggleFavorite={toggleFavorite}
+                isPriorityImage={currentTab === 'catalog' && index === 0}
               />
             ))}
           </div>
